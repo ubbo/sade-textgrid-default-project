@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<navigation>
+  <submenu label="Dokumentation">
+    <item label="Anpassen des Portals" link="index.html?id=webgui.md"/>
+    <item label="Publizieren aus TextGridLab" link="index.html?id=sadepublish.md"/>
+    <item label="TODO" link="index.html?id=TODO.md"/>
+  </submenu>
+  <submenu label="Weiterf&#xFC;hrende Links" link="#">
+    <item label="eXist Dashboard" link="/exist/apps/dashboard/index.html" target="_blank"/>
+    <item label="eXist Dokumentation" link="/exist/apps/doc/documentation.xml"/>
+    <item label="eXist XQuery Function Dokumentation" link="/exist/apps/fundocs/index.html"/>
+    <divider/>
+    <item label="XQuery Wikibook" link="http://en.wikibooks.org/wiki/XQuery"/>
+    <item label="TextGrid Benutzerhandbuch" link="https://dev2.dariah.eu/wiki/display/TextGrid/User+Manual+2.0"/>
+    <item label="TextGrid Homepage" link="http://textgrid.de"/>
+  </submenu>
+  <item label="Info" link="info.html"/>
+</navigation>

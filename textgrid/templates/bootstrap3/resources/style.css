@@ -1,0 +1,45 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  height: 100%;
+}
+
+.container {
+    margin-left: 0px;
+}
+
+.hi {
+    color: #ff0000;
+}
+
+.facet-deselected {
+    text-decoration: line-through;
+}
+
+.facet-minus {
+    padding-right: 6px;
+}
+
+.facet-plus {
+    padding-right: 6px;
+}
+
+.facet-area {
+    background: #e0dfdf;
+    box-shadow: -2px 2px 7px #bbb inset;
+    padding: 10px;
+    height: 100%;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    height: 100%;
+}
+
+.facet-area li {
+    list-style-type: none;
+}
+
+.facet-area ul {
+    padding: 5px 20px;
+    /*padding-top: 10px;*/
+    /*padding-left: 20px;  */
+}

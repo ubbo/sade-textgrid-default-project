@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!-- todo: index on config? -->
+<config>
+  <!-- global parameters -->
+  <param key="project-id">textgrid</param>
+  <param key="project-title">SADE</param>
+  <!-- reference to a template to be used for given project 
+            change the template for the project by changing the param template
+        TODO: how to distinguish between (sade-)global and (project-)local templates ? -->
+  <param key="template">bootstrap3</param>
+  <!-- data-dir is relative to project-dir
+        default: data -->
+  <param key="data-dir">data</param>
+  <!-- parameters for MODULES -->
+  <module key="tmpl-nav">
+    <param key="location">navigation.xml</param>
+  </module>
+  <module key="multiviewer">
+    <param key="xslt">
+      <!--stylesheet 
+                namespace="http://www.tei-c.org/ns/1.0"
+                location="stylesheets/db2xhtml.xsl">
+            <stylesheet 
+                namespace="http://www.tei-c.org/ns/1.0"
+                location="../text-viewer/resources/tei/stylesheet/xhtml2/tei.xsl">                
+                
+                
+            </stylesheet-->
+      <stylesheet namespace="http://blumenbach-online.de/blumenbachiana" local="true" location="xslt/bol.xsl">
+        <parameters>
+          <param name="imgParams" value="?dh=200"/>
+        </parameters>
+      </stylesheet>
+    </param>
+  </module>
+  <module key="faceted-search">
+    <param key="viewer.html">index.html?id=</param>
+    <!-- how much kwic hits to show per document -->
+    <param key="kwic.hits">2</param>
+    <param key="thumbnail">false</param>
+    <param key="facets">
+      <facet key="persons" title="Person">
+        <xpath>tei:author</xpath>
+      </facet>
+      <facet key="keywords" title="Schlagwort">
+        <xpath>tei:term</xpath>
+      </facet>
+      <facet key="dates" title="Zeit">
+        <xpath>tei:date/@when</xpath>
+      </facet>
+      <facet key="places" title="Publikationsort">
+        <xpath>tei:pubPlace</xpath>
+      </facet>
+    </param>
+  </module>
+</config>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div data-template="templates:init">
+    <div data-template="templates:surround" data-template-with="page_index.html" data-template-at="content-container">
+        <h2>Hier eine Liste der enthaltenen Dokumentation</h2>
+        <ul data-template="nav:navitems">
+            <li data-template="templates:each" data-template-from="navitems" data-template-to="item">
+                <strong data-template="nav:head"/>
+                <ul data-template="nav:subitems">
+                    <li data-template="templates:each" data-template-from="subitems" data-template-to="subitem">
+                        <a href="#" data-template="nav:subitem"/>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Hier die Config:</h2>
+        <div class="config:app-info"/>
+    </div>
+</div>
