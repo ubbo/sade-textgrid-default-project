@@ -22,5 +22,6 @@ declare function local:mkcol($collection, $path) {
 
 
 local:mkcol("", "/sade-projects/"),
-xdb:copy($target || "/textgrid", "/sade-projects/")
+xdb:copy($target || "/textgrid", "/sade-projects/"),
+xdb:copy($target || "/tutorial", "/sade-projects/")
 
