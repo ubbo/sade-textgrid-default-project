@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- global parameters -->
+    <param key="project-id">tutorial</param>
+    <param key="project-title">Mein Projekt</param>
+        <!-- reference to a template to be used for given project 
+            change the template for the project by changing the param template
+        TODO: how to distinguish between (sade-)global and (project-)local templates ? -->
+        
+        <!-- type=local? -->
+    <param key="template">bootstrap3</param>
+        <!-- data-dir is relative to project-dir
+        default: data -->
+    <param key="data-dir">data</param>
+
+    <!-- TODO: textgrid specific config 
+         choose between ws4 and ws3, etc...
+    -->
+    <param key="textgrid-tgcrud">a</param>
+    <param key="textgrid-rdfstore">b</param>
+    <!-- TODO: digilib could also be outside textgrid -->
+    <param key="textgrid-digilib">c</param>
+    
+    <!-- parameters for MODULE -->
+    <module key="search">
+        <param key="viewer.html">view.html?id=</param>
+        <param key="kwic.hits">3</param>  <!-- how much kwic hits to show per document -->
+        <param key="facets">
+            <facet key="persons" title="Person">
+                <xpath>tei:author</xpath>
+            </facet>
+            <facet key="keywords" title="Schlagwort">
+                <xpath>tei:term</xpath>
+            </facet>
+            <facet key="dates" title="Zeit">
+                <xpath>tei:date/@when</xpath>
+            </facet>
+            <facet key="places" title="Publikationsort">
+                <xpath>tei:pubPlace</xpath>
+            </facet>
+        </param>
+    </module>
+    <module key="navigation">
+        <param key="location" value="navigation.xml"/>
+    </module>
+</config>

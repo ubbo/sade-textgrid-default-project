@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div data-template="templates:init">
+    <div data-template="templates:surround" data-template-with="page_index.html" data-template-at="content-container">
+<!--        <div data-template="search:debug"/>-->
+        <div class="row" data-template="search:results">
+<!--            <div id="facetback"></div>-->
+            <ul class="col-md-3 facet-area">
+                <div data-template="search:facet"/>
+            </ul>
+            <div class="col-md-9">
+                <div>
+                    <span id="page" class="hidden" data-template="search:page"/>
+                    <span id="pages" class="hidden" data-template="search:pages"/>
+                    <div>
+                        <ul class="paginator pull-right"/> 
+                        Zeige Treffer <span id="hitstart" data-template="search:hitstart"/> - 
+                        <span id="hitend" data-template="search:hitend"/> von 
+                        <span id="hitcount" data-template="search:hitcount"/> Treffern
+                    </div>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Sortierung nach</label>
+                            <div class="col-sm-3">
+                                <select class="form-control input-sm">
+                                    <option>Relevanz</option>
+                                    <option>Titel</option>
+                                    <option>Jahr</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <select class="form-control input-sm">
+                                    <option>Aufsteigend</option>
+                                    <option>Absteigend</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                    <div data-template="templates:each" data-template-from="hits" data-template-to="hit" class="row">
+                        <div class="col-md-10">
+                            <strong>
+                                <a href="#" data-template="search:resultTitle">title</a>
+                            </strong>
+                            <p data-template="search:resultKwic">KWIC matches</p>
+                            <a href="#" data-template="search:resultSource">Source</a>
+                            <hr/>
+                        </div>
+                        <div class="col-md-2">
+                            <img data-template="search:resultImg"/>
+                        </div>
+                    </div>
+                    <div>
+                        <ul class="paginator pull-right"/> 
+                        Zeige Treffer <span id="hitstart" data-template="search:hitstart"/> - 
+                        <span id="hitend" data-template="search:hitend"/> von 
+                        <span id="hitcount" data-template="search:hitcount"/> Treffern
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+          $(function() {
+              
+            // http://www.samaxes.com/2011/09/change-url-parameters-with-jquery/
+            /*
+             * queryParameters -&gt; handles the query string parameters
+             * queryString -&gt; the query string without the fist '?' character
+             * re -&gt; the regular expression
+             * m -&gt; holds the string matching the regular expression
+             */
+            var queryParameters = {}, queryString = location.search.substring(1),
+                re = /([^&amp;=]+)=([^&amp;]*)/g, m;
+             
+            // Creates a map with the query string parameters
+            while (m = re.exec(queryString)) {
+                // queryParameters[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+                queryParameters[m[1]] = m[2];
+            }  
+              
+            $('.paginator').bootstrapPaginator({
+                bootstrapMajorVersion: 3,
+                currentPage: $('#page').text(),
+                totalPages: $('#pages').text(),
+                pageUrl: function(type, page, current){
+                    
+                    queryParameters['page'] = page;
+                    
+                    var querystring = "";
+                    $.each(queryParameters, function(key, val) {
+                        querystring += key + "=" + val + "&amp;";
+                    })
+                    querystring = querystring.substring(0, querystring.length-1)
+                    
+                    return window.location.pathname + '?' + querystring;
+                }
+		    })
+		    
+		    //$('.paginator').bootstrapPaginator("show", 10);
+		    
+		    $('.facet-minus').each(function() {
+		        $(this).html($('&lt;span class="glyphicon glyphicon-minus-sign" /&gt;'));
+		    });
+		    
+		    $('.facet-plus').each(function() {
+		        $(this).html($('&lt;span class="glyphicon glyphicon-plus-sign" /&gt;'));
+		    });
+		    
+		  //  $('.facetSelected').each(function(elem) {
+		        
+		       
+		       
+		  //     var link = $('&lt;a href="#"&gt;x&lt;/a&gt;');
+		       
+		  //    // $(this).html($('&lt;span&gt;'+$(this).text()+' &lt;/span&gt;' + link));
+		  //     $(this).append(link);
+		  //     console.log($(this).attr('key') + ":" + $(this).text());
+		  //  });
+            
+          });
+        </script>
+    </div>
+</div>

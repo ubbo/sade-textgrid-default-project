@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation>
+    <item label="Ein Text" link="index.html?id=text.md"/>
+    <submenu label="Links">
+        <item label="http://textgrid.de" link="http://textgrid.de"/>
+    </submenu>
+</navigation>
