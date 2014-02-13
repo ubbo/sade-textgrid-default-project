@@ -13,18 +13,25 @@
         default: data -->
     <param key="data-dir">data</param>
 
-    <!-- TODO: textgrid specific config 
-         choose between ws4 and ws3, etc...
-    -->
-    <param key="textgrid-tgcrud">a</param>
-    <param key="textgrid-rdfstore">b</param>
-    <!-- TODO: digilib could also be outside textgrid -->
-    <param key="textgrid-digilib">c</param>
+    <param key="textgrid.tgcrud">http://textgrid-esx1.gwdg.de/1.0/tgcrud/rest</param>
+    <param key="textgrid.webauth">http://textgrid-esx1.gwdg.de/1.0/WebAuthN/TextGrid-WebAuth.php</param>
+    <param key="textgrid.public-triplestore">http://textgrid-esx1.gwdg.de/1.0/triplestore/textgrid-public</param>
+    <param key="textgrid.nonpublic-triplestore">http://textgrid-esx1.gwdg.de/1.0/triplestore/textgrid-nonpublic</param>
     
     <!-- parameters for MODULE -->
-    <module key="search">
-        <param key="viewer.html">view.html?id=</param>
-        <param key="kwic.hits">3</param>  <!-- how much kwic hits to show per document -->
+    <module key="faceted-search">
+        <param key="viewer-html">index.html?id=</param>
+    <!-- how much kwic hits to show per document -->
+        <param key="kwic-hits">3</param>
+        <param key="thumbnail">false</param>
+        <param key="hits-per-page">10</param>
+        <param key="query-root">
+            <xpath>//tei:TEI</xpath>
+        </param>
+        <param key="result-title">
+            <xpath>//tei:fileDesc//tei:titleStmt/tei:title/text()</xpath>
+        </param>
+        <param key="thumbnail">false</param>
         <param key="facets">
             <facet key="persons" title="Person">
                 <xpath>tei:author</xpath>

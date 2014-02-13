@@ -2,20 +2,20 @@
 <div data-template="templates:init">
     <div data-template="templates:surround" data-template-with="page_index.html" data-template-at="content-container">
 <!--        <div data-template="search:debug"/>-->
-        <div class="row" data-template="search:results">
+        <div class="row" data-template="fsearch:results">
 <!--            <div id="facetback"></div>-->
             <ul class="col-md-3 facet-area">
-                <div data-template="search:facet"/>
+                <div data-template="fsearch:facet"/>
             </ul>
             <div class="col-md-9">
                 <div>
-                    <span id="page" class="hidden" data-template="search:page"/>
-                    <span id="pages" class="hidden" data-template="search:pages"/>
+                    <span id="page" class="hidden" data-template="fsearch:page"/>
+                    <span id="pages" class="hidden" data-template="fsearch:pages"/>
                     <div>
                         <ul class="paginator pull-right"/> 
-                        Zeige Treffer <span id="hitstart" data-template="search:hitstart"/> - 
-                        <span id="hitend" data-template="search:hitend"/> von 
-                        <span id="hitcount" data-template="search:hitcount"/> Treffern
+                        Zeige Treffer <span id="hitstart" data-template="fsearch:hitstart"/> - 
+                        <span id="hitend" data-template="fsearch:hitend"/> von 
+                        <span id="hitcount" data-template="fsearch:hitcount"/> Treffern
                     </div>
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
@@ -38,21 +38,21 @@
                     <div data-template="templates:each" data-template-from="hits" data-template-to="hit" class="row">
                         <div class="col-md-10">
                             <strong>
-                                <a href="#" data-template="search:resultTitle">title</a>
+                                <a href="#" data-template="fsearch:result-title">title</a>
                             </strong>
-                            <p data-template="search:resultKwic">KWIC matches</p>
-                            <a href="#" data-template="search:resultSource">Source</a>
+                            <p data-template="fsearch:result-kwic">KWIC matches</p>
+                            <a href="#" data-template="fsearch:result-source">Source</a>
                             <hr/>
                         </div>
                         <div class="col-md-2">
-                            <img data-template="search:resultImg"/>
+                            <img data-template="fsearch:result-img"/>
                         </div>
                     </div>
                     <div>
                         <ul class="paginator pull-right"/> 
-                        Zeige Treffer <span id="hitstart" data-template="search:hitstart"/> - 
-                        <span id="hitend" data-template="search:hitend"/> von 
-                        <span id="hitcount" data-template="search:hitcount"/> Treffern
+                        Zeige Treffer <span id="hitstart" data-template="fsearch:hitstart"/> - 
+                        <span id="hitend" data-template="fsearch:hitend"/> von 
+                        <span id="hitcount" data-template="fsearch:hitcount"/> Treffern
                     </div>
                 </div>
             </div>

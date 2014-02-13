@@ -10,6 +10,13 @@
   <param key="template">bootstrap3</param>
   <!-- data-dir is relative to project-dir
         default: data -->
+
+    <param key="textgrid.tgcrud">http://textgrid-esx1.gwdg.de/1.0/tgcrud/rest</param>
+    <param key="textgrid.webauth">http://textgrid-esx1.gwdg.de/1.0/WebAuthN/TextGrid-WebAuth.php</param>
+    <param key="textgrid.public-triplestore">http://textgrid-esx1.gwdg.de/1.0/triplestore/textgrid-public</param>
+    <param key="textgrid.nonpublic-triplestore">http://textgrid-esx1.gwdg.de/1.0/triplestore/textgrid-nonpublic</param>
+
+
   <param key="data-dir">data</param>
   <!-- parameters for MODULES -->
   <module key="tmpl-nav">
@@ -33,24 +40,32 @@
       </stylesheet>
     </param>
   </module>
-  <module key="faceted-search">
-    <param key="viewer.html">index.html?id=</param>
+    <module key="faceted-search">
+        <param key="viewer-html">index.html?id=</param>
     <!-- how much kwic hits to show per document -->
-    <param key="kwic.hits">2</param>
-    <param key="thumbnail">false</param>
-    <param key="facets">
-      <facet key="persons" title="Person">
-        <xpath>tei:author</xpath>
-      </facet>
-      <facet key="keywords" title="Schlagwort">
-        <xpath>tei:term</xpath>
-      </facet>
-      <facet key="dates" title="Zeit">
-        <xpath>tei:date/@when</xpath>
-      </facet>
-      <facet key="places" title="Publikationsort">
-        <xpath>tei:pubPlace</xpath>
-      </facet>
-    </param>
-  </module>
+        <param key="kwic-hits">3</param>
+        <param key="thumbnail">false</param>
+        <param key="hits-per-page">10</param>
+        <param key="query-root">
+            <xpath>//tei:TEI</xpath>
+        </param>
+        <param key="result-title">
+            <xpath>//tei:fileDesc//tei:titleStmt/tei:title/text()</xpath>
+        </param>
+        <param key="thumbnail">false</param>
+        <param key="facets">
+            <facet key="persons" title="Person">
+                <xpath>tei:author</xpath>
+            </facet>
+            <facet key="keywords" title="Schlagwort">
+                <xpath>tei:term</xpath>
+            </facet>
+            <facet key="dates" title="Zeit">
+                <xpath>tei:date/@when</xpath>
+            </facet>
+            <facet key="places" title="Publikationsort">
+                <xpath>tei:pubPlace</xpath>
+            </facet>
+        </param>
+    </module>
 </config>
