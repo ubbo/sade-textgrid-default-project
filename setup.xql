@@ -21,7 +21,11 @@ declare function local:mkcol($collection, $path) {
 };
 
 
+
+local:mkcol("/system/config/db/", "/sade-projects/textgrid/data/"),
+xdb:move($target || "/textgrid/", "/system/config/db/sade-projects/textgrid/data/", "collection.xconf"),
 local:mkcol("", "/sade-projects/"),
 xdb:copy($target || "/textgrid", "/sade-projects/"),
 xdb:copy($target || "/tutorial", "/sade-projects/")
+
 
