@@ -41,11 +41,12 @@
     </param>
   </module>
     <module key="faceted-search">
-        <param key="viewer-html">index.html?id=</param>
+        <param key="viewer-html">index.html?id=/xml/data/</param>
     <!-- how much kwic hits to show per document -->
         <param key="kwic-hits">3</param>
         <param key="thumbnail">false</param>
         <param key="hits-per-page">10</param>
+        <param key="result-xslt">/db/sade-projects/textgrid/xslt/search-hit.xslt</param>
         <param key="query-root">
             <xpath>//tei:TEI</xpath>
         </param>
