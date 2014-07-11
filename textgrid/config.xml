@@ -13,11 +13,22 @@
 
     <param key="textgrid.tgcrud">http://textgrid-esx1.gwdg.de/1.0/tgcrud/rest</param>
     <param key="textgrid.webauth">http://textgrid-esx1.gwdg.de/1.0/WebAuthN/TextGrid-WebAuth.php</param>
+    <param key="textgrid.authZinstance">textgrid-esx1.gwdg.de</param>
+    <param key="textgrid.user">TODO</param>
+    <param key="textgrid.password">TODO</param>
     <param key="textgrid.public-triplestore">http://textgrid-esx1.gwdg.de/1.0/triplestore/textgrid-public</param>
     <param key="textgrid.nonpublic-triplestore">http://textgrid-esx1.gwdg.de/1.0/triplestore/textgrid-nonpublic</param>
+    <param key="data-dir">data</param>
+    <param key="sade.user">admin</param>
+    <param key="sade.password"/>
+    <param key="textgrid.digilib">http://textgrid-esx1.gwdg.de/1.0/digilib/rest/digilib</param>
+    <param key="textgrid.digilib.tile">dw=100&amp;dh=100</param>
+    <param key="textgrid.sidcachepath">/sade-projects/textgrid/</param>
+    <param key="textgrid.sidcachepath.user">admin</param>
+    <param key="textgrid.sidcachepath.password"/>
 
 
-  <param key="data-dir">data</param>
+
   <!-- parameters for MODULES -->
   <module key="tmpl-nav">
     <param key="location">navigation.xml</param>
