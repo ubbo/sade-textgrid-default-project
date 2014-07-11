@@ -3,12 +3,12 @@
     <xsl:function name="tgmenu:setImage">
         <xsl:param name="type"/>
         <xsl:choose>
-            <xsl:when test="$type = 'collection'">/exist/rest/sade-projects/textgrid/data/img/Collection.gif</xsl:when>
-            <xsl:when test="$type = 'edition'">/exist/rest/sade-projects/textgrid/data/img/Edition.gif</xsl:when>
-            <xsl:when test="$type = 'aggregation'">/exist/rest/sade-projects/textgrid/data/img/Aggregation.gif</xsl:when>
-            <xsl:when test="$type = 'text/linkeditorlinkedfile'">/exist/rest/sade-projects/textgrid/data/img/TILE.png</xsl:when>
-            <xsl:when test="$type = 'text/xml'">/exist/rest/sade-projects/textgrid/data/img/TEI.gif</xsl:when>
-            <xsl:when test="starts-with($type,'image')">/exist/rest/sade-projects/textgrid/data/img/TEI.gif</xsl:when>
+            <xsl:when test="$type = 'collection'">/exist/rest/sade-projects/textgrid/templates/bootstrap3/resources/img/Collection.gif</xsl:when>
+            <xsl:when test="$type = 'edition'">/exist/rest/sade-projects/textgrid/templates/bootstrap3/resources/img/Edition.gif</xsl:when>
+            <xsl:when test="$type = 'aggregation'">/exist/rest/sade-projects/textgrid/templates/bootstrap3/resources/img/Aggregation.gif</xsl:when>
+            <xsl:when test="$type = 'text/linkeditorlinkedfile'">/exist/rest/sade-projects/textgrid/templates/bootstrap3/resources/img/TILE.png</xsl:when>
+            <xsl:when test="$type = 'text/xml'">/exist/rest/sade-projects/textgrid/templates/bootstrap3/resources/img/TEI.gif</xsl:when>
+            <xsl:when test="starts-with($type,'image')">/exist/rest/sade-projects/textgrid/templates/bootstrap3/resources/img/Image.gif</xsl:when>
             <xsl:otherwise/>
         </xsl:choose>
     </xsl:function>

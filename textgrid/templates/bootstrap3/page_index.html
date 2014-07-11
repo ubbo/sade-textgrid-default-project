@@ -1,13 +1,68 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title data-template="app:title"/><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link href="$shared/resources/css/bootstrap-3.0.3.min.css" rel="stylesheet" media="screen"/><link href="resources/style.css" rel="stylesheet" media="screen"/><script src="$shared/resources/scripts/jquery/jquery-1.7.1.min.js"/><link class="config:html-head"/>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title data-template="app:title"/>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="$shared/resources/css/bootstrap-3.0.3.min.css" rel="stylesheet" media="screen"/>
+        <link href="resources/style.css" rel="stylesheet" media="screen"/>
+        <script src="$shared/resources/scripts/jquery/jquery-1.7.1.min.js"/>
+        <link class="config:html-head"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]--></head><body>
-        <!-- Fixed navbar --><div class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"/><span class="icon-bar"/><span class="icon-bar"/></button><a class="navbar-brand" href="index.html" data-template="app:title">app title</a></div><div class="navbar-collapse collapse">
-                    <!-- here nav.html gets included --><ul data-template="templates:include" data-template-path="nav_include.html"/><div class="col-sm-3 col-md-3 pull-right"><form class="navbar-form" role="search" action="results.html" method="GET"><div class="input-group"><input type="text" placeholder="search" class="form-control" data-template="templates:form-control" name="q"/><span class="input-group-btn"><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"/></button></span></div></form></div></div><!--/.nav-collapse --></div></div>
-            
-            <!-- here is the main content inserted --><div class="container" id="content-container"/>
-
-        <!-- Include all compiled plugins (below), or include individual files as needed --><script src="$shared/resources/scripts/bootstrap-3.0.3.min.js"/></body></html>
+    <![endif]-->
+    </head>
+    <body>
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"/>
+                        <span class="icon-bar"/>
+                        <span class="icon-bar"/>
+                    </button>
+                    <a class="navbar-brand" href="index.html" data-template="app:project-id">app title</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <!-- here nav.html gets included -->
+                    <ul data-template="templates:include" data-template-path="nav_include.html"/>
+                    <div class="col-sm-3 col-md-3 pull-right">
+                        <form class="navbar-form" role="search" action="results.html" method="GET">
+                            <div class="input-group">
+                                <input type="text" placeholder="search" class="form-control" data-template="templates:form-control" name="q"/>
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-search"/>
+                                    </button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="sidebar-collapse collapse col-md-2" id="sidebar">
+                <ul data-template="nav:textgrid"/>
+            </div>   
+                <!-- here is the main content inserted -->
+            <div class="col-md-9 container" id="content-container"/>
+        </div>
+        <!--/.nav-collapse -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="$shared/resources/scripts/bootstrap-3.0.3.min.js"/>
+        <script type="application/javascript">
+            $("#sidebar-toggle").click(function(e) {
+                e.preventDefault();
+                $("#sidebar").toggleClass("active");
+            });
+            $('.tree-toggle').click(function () {
+        	 $(this).parent().children('ul.tree').toggle(200);
+            });
+        </script>
+    </body>
+</html>

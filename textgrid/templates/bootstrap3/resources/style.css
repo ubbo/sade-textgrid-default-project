@@ -3,9 +3,11 @@ body {
   padding-bottom: 30px;
   height: 100%;
 }
-
+.nav.nav-list.tree {
+    padding-left: 10px;
+}
 .container {
-    margin-left: 0px;
+    margin-left: 15px;
 }
 
 .hi {
@@ -43,3 +45,4 @@ body {
     /*padding-top: 10px;*/
     /*padding-left: 20px;  */
 }
+
