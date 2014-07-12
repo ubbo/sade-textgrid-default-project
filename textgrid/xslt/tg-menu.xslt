@@ -1,4 +1,5 @@
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tgmenu="http://tgimage" exclude-result-prefixes="xs tgmenu" version="2.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tgmenu="http://tgmenu" exclude-result-prefixes="xs tgmenu" 
+version="2.0">
     <xsl:output method="xhtml" indent="yes" encoding="UTF-8"/>
     <xsl:function name="tgmenu:setImage">
         <xsl:param name="type"/>
@@ -22,9 +23,9 @@
             <a>
                 <xsl:attribute name="href">
                     <xsl:choose>
-                        <xsl:when test="@type = 'text/xml'">index.html?id=/xml/data/<xsl:value-of select="@uri"/>.xml</xsl:when>
-                        <xsl:when test="@type = 'text/linkeditorlinkedfile'">index.html?id=/xml/tile/<xsl:value-of select="@uri"/>.xml</xsl:when>
-                        <xsl:when test="starts-with(@type,'image'">/exist/apps/textgrid-connect/digilib/textgrid/textgrid:<xsl:value-of select="@uri"/>?dh=1000</xsl:when>
+                        <xsl:when test="@type = 'text/xml'">index.html?id=/xml/data/<xsl:value-of select="substring-after(@uri, ':')"/>.xml</xsl:when>
+                        <xsl:when test="@type = 'text/linkeditorlinkedfile'">index.html?id=/xml/tile/<xsl:value-of select="substring-after(@uri, ':')"/>.xml</xsl:when>
+                        <xsl:when test="starts-with(@type,'image')">/exist/apps/textgrid-connect/digilib/textgrid/<xsl:value-of select="@uri"/>?dw=1000</xsl:when>
                     </xsl:choose>
                 </xsl:attribute>
                 <img src="{tgmenu:setImage(@type)}" alt="icon" style="padding-right:5px;"/>
@@ -52,7 +53,7 @@
                             <li>
                                 <label class="tree-toggle nav-header">
                                     <a href="index.html">
-                                        <img src="/exist/rest/sade-projects/textgrid/templates/bootstap3/resources/img/Welcome.gif" alt="icon" style="padding-right:5px;"/>Home</a>
+                                        <img src="/exist/rest/sade-projects/textgrid/templates/bootstrap3/resources/img/Welcome.gif" alt="icon" style="padding-right:5px;"/>Home</a>
                                 </label>
                             </li>
                             <li class="divider"/>
