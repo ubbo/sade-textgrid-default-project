@@ -51,7 +51,7 @@
                             <li>
                                 <label class="tree-toggle nav-header">
                                     <a href="index.html">
-                                        <img src="/exist/rest/sade-projects/textgrid/data/img/Welcome.gif" alt="icon" style="padding-right:5px;"/>Home</a>
+                                        <img src="/exist/rest/sade-projects/textgrid/templates/bootstap3/resources/img/Welcome.gif" alt="icon" style="padding-right:5px;"/>Home</a>
                                 </label>
                             </li>
                             <li class="divider"/>
