@@ -24,6 +24,7 @@
                     <xsl:choose>
                         <xsl:when test="@type = 'text/xml'">index.html?id=/xml/data/<xsl:value-of select="@uri"/>.xml</xsl:when>
                         <xsl:when test="@type = 'text/linkeditorlinkedfile'">index.html?id=/xml/tile/<xsl:value-of select="@uri"/>.xml</xsl:when>
+                        <xsl:when test="starts-with(@type,'image'">/exist/apps/textgrid-connect/digilib/textgrid/textgrid:<xsl:value-of select="@uri"/>?dh=1000</xsl:when>
                     </xsl:choose>
                 </xsl:attribute>
                 <img src="{tgmenu:setImage(@type)}" alt="icon" style="padding-right:5px;"/>
