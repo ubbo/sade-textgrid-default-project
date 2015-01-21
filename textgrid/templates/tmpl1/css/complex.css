@@ -1,0 +1,61 @@
+#progressbar {
+    background-color: white;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    height: 34px;
+    overflow: hidden;
+    width: 100%;
+}
+#progress {
+    display: block;
+    height: 100%;
+    width: 0;
+}
+.progressbarValid {
+    background-color: green;
+    background-image: linear-gradient(-90deg, #8ad702 0%, #389100 100%);
+}
+.progressbarInvalid {
+    background-color: red;
+    background-image: linear-gradient(-90deg, #f94046 0%, #92080b 100%);
+}
+#status {
+    background-color: white;
+    border: 1px solid #ccc;
+    height: 34px;
+    width: 300%;
+}
+#password {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 9px;
+    outline: medium none;
+    padding: 4px;
+    width: 100%;
+}
+#complexityLabel {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+#complexity {
+    font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+#cpw {
+    width: 100%;
+}

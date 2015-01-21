@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div data-template="templates:init">
+    <div data-template="templates:surround" data-template-with="page_index.html" data-template-at="content-container">
+<!-- Main body
+================== -->
+        <div class="wrapper">
+    <!-- Page Tip -->
+            <div class="page-tip animated slideInDown">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>Fill out the form below to sign up.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- Main Form -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 signup">
+                        <h3 class="hl top-zero">Registration</h3>
+                        <hr/>
+                        <form role="form" action="00test.html" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="projectname" placeholder="Projektname" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Erlaubt sind nur lateinische Buchstaben und Zahlen sowie &#34;-&#34; und &#34;_&#34;. Leerzeichen werden automatisch durch &#34;_&#34; ersetzt." data-original-title="Projektname" name="project-name"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="newuser" placeholder="Ihr Name" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Erlaubt sind nur lateinische Buchstaben und Zahlen sowie &#34;-&#34; und &#34;_&#34;. Leerzeichen werden automatisch durch &#34;_&#34; ersetzt." data-original-title="Ihr Name" name="newuser"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="InEmail" placeholder="Enter email" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter a valid email here." data-original-title="Email" name="email"/>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control margin-bottom-xs" id="Password1" placeholder="Password" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Complexity of 41% at least!" data-original-title="Password" name="dwp"/>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div id="progressbar">
+                                            <div id="progress"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <div id="status">
+                                            <div id="complexity"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control" id="Password2" placeholder="Repeat Password" data-toggle="popover" data-trigger="focus" data-content="Make sure you still remember it." data-original-title="Repeat Password" name="pwd"/>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <button type="button" class="btn btn-default" id="cpw">Generate secure password</button>
+                                    </div>
+                                    <div class="col-sm-1"/>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="tospp" type="checkbox"/> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div>
+                            <input type="submit" class="btn btn-warning btn-disabled" disabled="disabled"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <link rel="stylesheet" href="css/complex.css"/>
+            <script type="text/javascript">
+    $( document ).ready(function() {
+                
+        $("#Password1").complexify({}, function (valid, complexity) {
+            if (!valid) {
+                $('#progress').css({'width':complexity + '%'}).removeClass('progressbarValid').addClass('progressbarInvalid');
+                $('.btn-green').addClass('btn-warning').removeClass('btn-green').prop({disabled: true});
+            } else {
+                $('#progress').css({'width':complexity + '%'}).removeClass('progressbarInvalid').addClass('progressbarValid');
+                $('.btn-warning').addClass('btn-green').removeClass('btn-warning').prop({disabled: false});
+            }
+            $('#complexity').html(Math.round(complexity) + '%');
+        });
+        $('#cpw').click(function() {
+            var text = $.password(18);
+            $( "#Password1" ).val( text );   
+            $( "#Password2" ).val( text );
+            $( "#Password1" ).focus();
+        });
+        
+    });
+    </script>
+            <script src="js/pwcreator.js"/>
+        </div>
+    </div>
+</div>

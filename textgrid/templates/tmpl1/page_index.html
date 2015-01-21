@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <link rel="shortcut icon" href="img/favicon.ico"/>
+        <title>SADE</title>
+
+    <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+        <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+        <link rel="stylesheet" type="text/css" href="css/elements.css"/>
+        <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+        <link href="fonts/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    </head>
+    <body>
+
+  <!-- Navbar
+    ============= -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"/>
+                        <span class="icon-bar"/>
+                        <span class="icon-bar"/>
+                    </button>
+                    <span class="navbar-brand" data-template="app:project-id">app title</span>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul data-template="templates:include" data-template-path="nav_include.html"/>
+
+          <!-- Search form for extra small screens -->
+                    <form class="navbar-form navbar-left visible-xs" role="search" action="results.html" method="GET">
+                        <div class="form-group">
+                            <input type="text" placeholder="search" class="form-control" data-template="templates:form-control" name="q"/>
+                        </div>
+                        <button type="submit" class="btn btn-blue">Go!</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right hidden-xs">
+            <!-- Search Button -->
+                        <div class="nav navbar-nav navbar-right hidden-xs">
+                            <form class="navbar-form" role="search" action="results.html" method="GET" style="max-width:300px; position: absolute; right: 0;">
+                                <div class="input-group">
+                                    <input type="text" placeholder="search" class="form-control" data-template="templates:form-control" name="q"/>
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-search"/>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-collapse collapse col-md-2" id="sidebar">
+            <ul data-template="nav:textgrid"/>
+        </div>
+        <div id="content-container"/>
+<!-- Foooter
+================== -->
+        <footer>
+            <div class="container">
+                <div class="row">
+        <!-- Contact Us 
+        =================  -->
+                    <div class="col-sm-4">
+                        <div class="headline">
+                            <h3>Kontakt</h3>
+                        </div>
+                        <div class="content">
+                            <p>
+            Niedersächsische Staats- und Universitätsbibliothek Göttingen<br/>
+            Georg-August-Universität Göttingen<br/>
+            Platz der Göttinger Sieben 1<br/>
+            Phone: +49 (0)551 / 39-5212<br/>
+            Fax: +49 (0)551 / 39-5222<br/>
+            Email: <a href="mailto:sekretariat@sub.uni-goettingen.de">sekretariat@sub.uni-goettingen.de</a>
+                            </p>
+                        </div>
+                    </div>
+        <!-- Subscribe 
+        =============== -->
+                    <div class="col-sm-4">
+                        <div class="headline">
+                            <h3>Newsletter</h3>
+                        </div>
+                        <div class="content">
+                            <p>Informationen über Updates und neue Entwicklungen bekommen Sie per Mail.<br/>Wir melden uns.</p>
+                            <form class="form" role="form">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="input-group">
+                                            <label class="sr-only" for="subscribe-email">Email-Adresse</label>
+                                            <input type="email" class="form-control" id="subscribe-email" placeholder="example@example.edu"/>
+                                            <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-default">OK</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+  <!-- Legal 
+  ============= -->
+        <div class="legal">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>(cc-by-sa) TextGrid | <a href="imprint.html">Impressum</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/bootstrap.min.js"/>
+        <script src="js/custom.js"/>
+        <script src="js/scrolltopcontrol.js"/><!-- Scroll to top javascript -->
+        <script type="text/javascript" src="js/complex.js"/>
+        <script type="application/javascript">
+            $(".sidebar-toggle").click(function(e) {
+                e.preventDefault();
+                $("#sidebar").toggleClass("active animated slideInLeft");
+            });
+            $('.tree-toggle').click(function () {
+        	 $(this).parent().children('ul.tree').toggle(200);
+            });
+        </script>
+    </body>
+</html>

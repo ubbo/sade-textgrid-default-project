@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <navigation>
     <submenu label="Dokumentation">
         <item label="Anpassen des Portals" link="index.html?id=webgui.md"/>
-		<item label="Facetierte Suche" link="index.html?id=fsearch.md"/>
+        <item label="Facetierte Suche" link="index.html?id=fsearch.md"/>
         <item label="Publizieren aus TextGridLab" link="index.html?id=sadepublish.md"/>
         <item label="TODO" link="index.html?id=TODO.md"/>
     </submenu>

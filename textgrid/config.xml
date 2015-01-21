@@ -1,16 +1,16 @@
-<?xml version="1.0"?>
-<!-- todo: index on config? -->
+<?xml version="1.0" encoding="UTF-8"?>
 <config>
+<!-- todo: index on config? -->
+
   <!-- global parameters -->
-  <param key="project-id">textgrid</param>
-  <param key="project-title">SADE</param>
+    <param key="project-id">textgrid</param>
+    <param key="project-title">SADE</param>
   <!-- reference to a template to be used for given project 
             change the template for the project by changing the param template
         TODO: how to distinguish between (sade-)global and (project-)local templates ? -->
-  <param key="template">bootstrap3</param>
+    <param key="template">bootstrap3</param>
   <!-- data-dir is relative to project-dir
         default: data -->
-
     <param key="textgrid.tgcrud">http://textgrid-esx1.gwdg.de/1.0/tgcrud/rest</param>
     <param key="textgrid.webauth">http://textgrid-esx1.gwdg.de/1.0/WebAuthN/TextGrid-WebAuth.php</param>
     <param key="textgrid.authZinstance">textgrid-esx1.gwdg.de</param>
@@ -30,11 +30,11 @@
 
 
   <!-- parameters for MODULES -->
-  <module key="tmpl-nav">
-    <param key="location">navigation.xml</param>
-  </module>
-  <module key="multiviewer">
-    <param key="xslt">
+    <module key="tmpl-nav">
+        <param key="location">navigation.xml</param>
+    </module>
+    <module key="multiviewer">
+        <param key="xslt">
       <!--stylesheet 
                 namespace="http://www.tei-c.org/ns/1.0"
                 location="stylesheets/db2xhtml.xsl">
@@ -44,13 +44,13 @@
                 
                 
             </stylesheet-->
-      <stylesheet namespace="http://blumenbach-online.de/blumenbachiana" local="true" location="xslt/bol.xsl">
-        <parameters>
-          <param name="imgParams" value="?dh=200"/>
-        </parameters>
-      </stylesheet>
-    </param>
-  </module>
+            <stylesheet namespace="http://blumenbach-online.de/blumenbachiana" local="true" location="xslt/bol.xsl">
+                <parameters>
+                    <param name="imgParams" value="?dh=200"/>
+                </parameters>
+            </stylesheet>
+        </param>
+    </module>
     <module key="faceted-search">
         <param key="viewer-html">index.html?id=/xml/data/</param>
     <!-- how much kwic hits to show per document -->
