@@ -4,7 +4,10 @@ Version:	1.3
 Created: 		18/10/2013
 Last change:	07/03/2014
 -------------------------------------------------------------------*/
-
+var pathArray = window.location.pathname.split( '/' );
+if ( pathArray[4] != 'textgrid' ){
+        $('div#sidebar li a').each(){ $(this).attr('href', $(this).attr('href').replace(/textgrid/g, pathArray[4]));}
+    }
 
 // Search box toggle
 // =================
