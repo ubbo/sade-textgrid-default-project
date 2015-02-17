@@ -6,7 +6,7 @@ Last change:	07/03/2014
 -------------------------------------------------------------------*/
 var pathArray = window.location.pathname.split( '/' );
 if ( pathArray[4] != 'textgrid' ){
-        $('div#sidebar li a').each(function(){ $(this).attr('href', $(this).attr('href').replace(/textgrid/g, pathArray[4]))});
+        $('div#sidebar li a').each(function(){ $(this).attr('href', $(this).attr('href').replace(/textgrid\//g, pathArray[4] + '/'))});
     }
 
 // Search box toggle
