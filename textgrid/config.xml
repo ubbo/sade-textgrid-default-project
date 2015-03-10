@@ -7,7 +7,7 @@
   <!-- reference to a template to be used for given project 
             change the template for the project by changing the param template
         TODO: how to distinguish between (sade-)global and (project-)local templates ? -->
-  <param key="template">bootstrap3</param>
+  <param key="template">tmpl1</param>
   <!-- data-dir is relative to project-dir
         default: data -->
 
