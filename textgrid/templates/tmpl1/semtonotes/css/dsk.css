@@ -1,0 +1,585 @@
+/* SemToNotes SADE Integration CSS see BOTTOM!!! */
+
+/*
+ * common
+ */
+
+a.large {
+font-size: 2em;
+margin: 10px;
+}
+
+.noscript {
+display: none;
+}
+
+.noscript-invisible{
+visibility: hidden;
+}
+
+/*
+ * index page
+ */
+
+div.center {
+width: 700px;
+text-align: center;
+}
+
+div.right-block {
+display: block;
+margin-bottom: 1em;
+}
+
+span.preselection {
+display: block;
+color: #3366CC;
+font-size: 1.5em;
+margin-bottom: 1em;
+}
+
+#index-wordcloud {
+position: absolute;
+display: block;
+right: 10px;
+width: 250px;
+background-color: #EDF9FF;
+padding: 22px;
+}
+
+#index-image {
+position: relative;
+width: 700px;
+height: 350px;
+margin: 10px;
+overflow: hidden;
+}
+
+#index-content {
+position: relative;
+width: 700px;
+margin: 10px;
+margin-top: 35px;
+}
+
+#index-logo {
+position: relative;
+width: 700px;
+margin: 10px;
+margin-top: 35px;
+}
+
+#index-link, #about-link {
+position: relative;
+width: 700px;
+margin: 10px;
+margin-top: 35px;
+text-align: center;
+}
+
+#index-slider {
+position: relative;
+width: 700px;
+height: 350px;
+overflow: hidden;
+}
+
+#index-slider image {
+position: absolute;
+top: 0px;
+left: 0px;
+}
+
+#index-arrowLeft {
+position: absolute;
+top: 20px;
+left: 0px;
+}
+
+#index-arrowRight {
+position: absolute;
+top: 20px;
+right: 0px;
+}
+
+/*
+ * list page
+ */
+
+span.bold {
+font-weight: bold;
+}
+
+#list-content {
+position: relative;
+width: 700px;
+margin: 10px; 
+}
+
+#list-content span.h1 {
+color: #3366CC;
+font-size: 1.4em;
+font-weight: bold;
+line-height: 2em;
+margin-left: 10px;
+}
+
+#list-content span.h2, #list-content span.select-all {
+color: #3366CC;
+font-size: 1.1em;
+margin-left: 10px;
+}
+
+#list-content span.select-all * {
+color: #99B2E6;
+font-size: .9em;
+}
+
+#list-filter {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 300px;
+}
+
+#list-filter input {
+visibility: hidden;
+}
+
+#list-filter input.select-all {
+visibility: visible;
+display: none;
+}
+
+#list-filter .light-grey {
+color: rgb(200, 200, 200);
+}
+
+#list {
+position:relative;
+margin-left: 350px;
+width: 650px;
+}
+
+#list .list-item {
+margin-top: 20px;
+border-left: solid #0099FF 5px;
+padding: 5px;
+height: 100px;
+}
+
+#list .thumb {
+position: relative;
+float: left;
+}
+
+#list .abstract {
+position: relative;
+margin-left: 120px;
+}
+
+/**
+ * view page
+ */
+
+
+
+canvas {
+z-index: 300;
+}
+
+#view-main {
+position: relative;
+display: block;
+width: 100%;
+height: 100%;
+}
+
+.resize-n {
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 7px;
+cursor: ns-resize;
+z-index: 900;
+}
+
+.resize-ne {
+position: absolute;
+top: 0px;
+right: 0px;
+width: 7px;
+height: 7px;
+cursor: nesw-resize;
+z-index: 910;
+}
+
+.resize-e {
+position: absolute;
+top: 0px;
+right: 0px;
+width: 7px;
+height: 100%;
+cursor: ew-resize;
+z-index: 900;
+}
+
+.resize-es {
+position: absolute;
+bottom: 0px;
+right: 0px;
+width: 7px;
+height: 7px;
+cursor: se-resize;
+z-index: 910;
+}
+
+.resize-s {
+position: absolute;
+bottom: 0px;
+left: 0px;
+width: 100%;
+height: 7px;
+cursor: ns-resize;
+z-index: 900;
+}
+
+.resize-sw {
+position: absolute;
+bottom: 0px;
+left: 0px;
+width: 7px;
+height: 7px;
+cursor: nesw-resize;
+z-index: 910;
+}
+
+.resize-w {
+position: absolute;
+top: 0px;
+left: 0px;
+width: 7px;
+height: 100%;
+cursor: ew-resize;
+z-index: 900;
+}
+
+.resize-wn {
+position: absolute;
+top: 0px;
+left: 0px;
+width: 7px;
+height: 7px;
+cursor: se-resize;
+z-index: 910;
+}
+
+#view-main .resizable {
+position: absolute;
+right: 0px;
+bottom: 0px;
+width: 7px;
+height: 7px;
+background-color: #0099FF;
+cursor: se-resize;
+z-index: 910;
+}
+
+#view-main .toolbar {
+position: absolute;
+right: 4px;
+top: 4px;
+z-index: 40;
+display: none;
+}
+
+#view-header {
+position: relative;
+margin: 1%;
+background-color: white;
+padding: 10px;
+border: 1px solid #0099FF;
+}
+
+#view-pages {
+position: absolute;
+display: block;
+right: 0px;
+top: -17px;
+height: 15px;
+}
+
+#options {
+position: absolute;
+right: 20px;
+bottom: 14px;
+}
+
+#options * {
+color: #3366CC;
+}
+
+#window-image {
+position: absolute;
+left: 1%;
+width: 48%;
+height: 92%;
+display: block;
+border: 1px solid #0099FF;
+background-color: white;
+}
+
+#window-image-inner {
+position: relative;
+height: 100%;
+background-color: white;
+overflow: hidden;
+}
+
+#view-text {
+position: absolute;
+right: 1%;
+width: 48%;
+height: 92%;
+display: block;
+}
+
+#view-text-inner {
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+#window-comment, #window-transcription1,
+#window-transcription2 {
+position: relative;
+width: 100%;
+border: 1px solid #00B4FF;
+background-color: white;
+}
+
+#window-comment, #window-transcription1 {
+margin-bottom: .4%;
+height: 37%;
+}
+
+#window-transcription2 {
+height: 25%;
+}
+
+#view-main div.h1 {
+position: absolute;
+left: 0px;
+top: 0px;
+width: 98%;
+color: #3366CC;
+font-size: 22px;
+font-weight: bold;
+padding-left: 2%;
+padding-top: 16px;
+display: block;
+background-color: #EDF9FF;
+z-index: 30;
+height: 28px;
+}
+
+#view-main div.content {
+position: relative;
+width: 100%;
+height: 100%;
+overflow-y: scroll;
+}
+
+#view-main div.p {
+position: relative;
+margin: 10px;
+margin-top: 3em;
+display: block;
+}
+
+#view-main span.hover-text {
+display: inline-block;
+z-index: 25;
+}
+
+/**
+ * transcription
+ */
+
+#view-main .tooltip {
+display: none;
+}
+
+#view-main div.line {
+display: block;
+margin: 5px;
+}
+
+#view-main div.heading {
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+#view-main span.heading {
+color: #A77F06;
+font-size: 2em;
+font-weight: bold;
+font-family: "Courier New";
+}
+
+#view-main span.hr {
+border-bottom: solid rgb(150,150,150) 1px;
+margin-bottom: 5px;
+display: inline-block;
+}
+
+#view-main span.label {
+font-family: "Courier new";
+}
+
+#view-main div.editor, #view-main div.date,
+#view-main div.classCode, #view-main div.abstract,
+#view-main div.handNotes {
+margin-bottom: 1em;
+}
+
+#view-main div.region {
+border-bottom: solid #A77F06 3px;
+}
+
+#view-main .tooltip {
+vertical-align: super;
+font-size: .5em;
+}
+
+#view-main .tei_lb {
+text-decoration: none;
+width: 30px;
+display: inline-block;
+}
+
+#view-main .tei_choice {
+color: #C50404;
+}
+
+#view-main .tei_pb {
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+#view-main .tei_elongata {
+font-family: "Andale Mono";
+font-size: 1.5em;
+}
+
+#view-main .tei_foreign, #view-main .tei_foreign * {
+font-style: italic;
+}
+
+#view-main .tei_del, #view-main .tei_del *{
+text-decoration: line-through;
+}
+
+#view-main .handS2 {
+border-bottom: 1px dashed blue;
+}
+
+#view-main .tei_handShift {
+display: none;
+color: rgb(150,150,150);
+}
+
+#view-main svg {
+margin-left: -.15em;
+}
+
+#view-main table, #view-main tr, #view-main td {
+border: solid grey 1px;
+border-collapse:collapse;
+padding: 1em;
+vertical-align: top;
+}
+
+#view-main span.error {
+color: red;
+}
+
+#view-main span.superscript {
+vertical-align: super;
+font-size: smaller;
+line-height: normal;
+}
+
+#view-main span.tei_quote, #view-main span.tei_quote * {
+text-decoration: underline;
+}
+
+#view-main span.tei_add_above, #view-main span.tei_add_above * {
+vertical-align: super;
+}
+
+#view-main .tei_add {
+color: #04C51E;
+text-decoration: underline;
+}
+
+/* SADE Styles */
+
+#stn {
+    height:780px;
+    display:block;
+}
+
+#stn input[type="checkbox"] {
+  display: none;
+}
+#stn .section-header h1 span {
+  border-bottom: 5px solid lightgrey;
+  padding-bottom: 10px;
+}
+#stn .section-header h1 input:checked+span {
+  border-bottom: 5px solid #00B4FF !important;
+  padding-bottom: 10px;
+}
+#stn .section-header h1 label {
+  color: #666;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+#stn #view-main div.h1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 98%;
+  color: white;
+  font-size: inherit;
+  font-weight: bold;
+  padding: 2%;
+  background-color: #00B4FF;
+  padding-top: inherit;
+  display: block;
+  z-index: 30;
+  margin-top: 0;
+  height: inital;
+  padding-top: 6px;
+}
+#stn i.fa{
+    font-size: 21px;
+}
+#stn #window-image-inner > div.h1 {
+    width:100%;
+}
+#stn .figure {
+      border: 1px solid grey;
+      margin-bottom: 5px;
+}
+#stn .section-header {
+  background: #f5f5f5;
+  border-bottom: 1px solid #dedede;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
