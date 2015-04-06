@@ -1,0 +1,34 @@
+
+.hi {
+    color: #ff0000;
+}
+
+.facet-deselected {
+    text-decoration: line-through;
+}
+
+.facet-minus {
+    padding-right: 6px;
+}
+
+.facet-plus {
+    padding-right: 6px;
+}
+
+.facet-area {
+    background: #e0dfdf;
+    box-shadow: -2px 2px 7px #bbb inset;
+    padding: 10px;
+    height: 100%;
+    margin-left: -20px;
+    height: 100%;
+}
+
+.facet-area li {
+    list-style-type: none;
+}
+
+.facet-area ul {
+    padding: 5px 20px;
+}
+
