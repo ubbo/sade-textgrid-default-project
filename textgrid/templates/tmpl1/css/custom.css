@@ -1529,3 +1529,8 @@ div#nav-textgrid ul.nav li {
     z-index:1000000;
     background-color: gray;
     opacity:0.6;}
+
+.teiXsltView {
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,serif;
+    font-size: 1.4em;
+}
