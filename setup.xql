@@ -28,4 +28,4 @@ local:mkcol("", "/sade-projects/"),
 xdb:copy($target || "/textgrid", "/sade-projects/"),
 xdb:copy($target || "/tutorial", "/sade-projects/"),
 
-xmldb:reindex("/db/sade-projects/textgrid/data/"),
+xmldb:reindex("/db/sade-projects/textgrid/data/")
