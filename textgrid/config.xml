@@ -17,6 +17,9 @@
     <!--  if you want to distinguish between develop and productive instance,
           set sade.develop "true" -->
     <param key="sade.develop">true</param>
+    <!--  if sade.develop is set to true and you want to look behind the curtain
+          you probably want to set a password like secret for auth -->
+    <param key="secret">TODO</param>
     <param key="textgrid.digilib">https://textgridlab.org/1.0/digilib/rest/IIIF</param>
     <param key="textgrid.digilib.tile">dw=100&amp;dh=100</param>
     <param key="textgrid.sidcachepath">/sade-projects/textgrid/</param>

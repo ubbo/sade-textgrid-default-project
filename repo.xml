@@ -1,7 +1,8 @@
 <meta xmlns="http://exist-db.org/xquery/repo">
     <description>TextGrid default project for SADE</description>
-    <author/>
-    <website/>
+    <author>Ubbo Veentjer</author>
+    <author>Mathias Göbel</author>
+    <website>https://textgrid.de</website>
     <status>alpha</status>
     <license>GNU-LGPL</license>
     <copyright>true</copyright>
