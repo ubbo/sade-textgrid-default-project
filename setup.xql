@@ -1,6 +1,6 @@
 xquery version "3.0";
 
-declare variable $target external;
+(:declare variable $target external;:)
 
 declare function local:mkcol-recursive($collection, $components) {
     if (exists($components)) then
@@ -18,6 +18,8 @@ declare function local:mkcol($collection, $path) {
     local:mkcol-recursive($collection, tokenize($path, "/"))
 };
 
+let $target := "/db/apps/sade-textgrid-default-project"
+return
 (
     local:mkcol("/system/config/db/", "/sade-projects/textgrid/data/"),
     xmldb:copy($target || "/textgrid/", "/system/config/db/sade-projects/textgrid/data/", "collection.xconf"),
