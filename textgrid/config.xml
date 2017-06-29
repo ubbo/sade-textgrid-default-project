@@ -3,13 +3,7 @@
   <!-- global parameters -->
     <param key="project-id">textgrid</param>
     <param key="project-title">SADE</param>
-  <!-- reference to a template to be used for given project 
-            change the template for the project by changing the param template
-        TODO: how to distinguish between (sade-)global and (project-)local templates ? -->
-  <param key="template">tmpl1</param>
-  <!-- data-dir is relative to project-dir
-        default: data -->
-
+    <param key="template">/templates/tmpl1/</param>
     <param key="textgrid.tgcrud">https://textgridlab.org/1.0/tgcrud/rest</param>
     <param key="textgrid.webauth">https://textgridlab.org/1.0/WebAuthN/TextGrid-WebAuth.php</param>
     <param key="textgrid.authZinstance">textgrid-esx2.gwdg.de</param>
@@ -20,6 +14,9 @@
     <param key="data-dir">data</param>
     <param key="sade.user">admin</param>
     <param key="sade.password"/>
+    <!--  if you want to distinguish between develop and productive instance,
+          set sade.develop "true" -->
+    <param key="sade.develop">true</param>
     <param key="textgrid.digilib">https://textgridlab.org/1.0/digilib/rest/IIIF</param>
     <param key="textgrid.digilib.tile">dw=100&amp;dh=100</param>
     <param key="textgrid.sidcachepath">/sade-projects/textgrid/</param>
@@ -34,14 +31,14 @@
     </module>
     <module key="multiviewer">
         <param key="xslt">
-      <!--stylesheet 
+      <!--stylesheet
                 namespace="http://www.tei-c.org/ns/1.0"
                 location="stylesheets/db2xhtml.xsl">
-            <stylesheet 
+            <stylesheet
                 namespace="http://www.tei-c.org/ns/1.0"
-                location="../text-viewer/resources/tei/stylesheet/xhtml2/tei.xsl">                
-                
-                
+                location="../text-viewer/resources/tei/stylesheet/xhtml2/tei.xsl">
+
+
             </stylesheet-->
             <stylesheet namespace="http://blumenbach-online.de/blumenbachiana" local="true" location="xslt/bol.xsl">
                 <parameters>

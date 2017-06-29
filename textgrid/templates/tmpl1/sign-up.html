@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div data-template="templates:init">
-    <div data-template="templates:surround" data-template-with="page_index.html" data-template-at="content-container">
+    <div data-template="templates:surround" data-template-with="/../../sade-projects/textgrid/templates/tmpl1/page_index.html" data-template-at="content-container">
 <!-- Main body
 ================== -->
         <div class="wrapper">
@@ -69,7 +68,7 @@
             <link rel="stylesheet" href="css/complex.css"/>
             <script type="text/javascript">
     $( document ).ready(function() {
-                
+
         $("#Password1").complexify({}, function (valid, complexity) {
             if (!valid) {
                 $('#progress').css({'width':complexity + '%'}).removeClass('progressbarValid').addClass('progressbarInvalid');
@@ -82,14 +81,13 @@
         });
         $('#cpw').click(function() {
             var text = $.password(18);
-            $( "#Password1" ).val( text );   
+            $( "#Password1" ).val( text );
             $( "#Password2" ).val( text );
             $( "#Password1" ).focus();
         });
-        
+
     });
     </script>
             <script src="js/pwcreator.js"/>
         </div>
     </div>
-</div>
