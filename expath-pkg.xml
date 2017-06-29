@@ -1,3 +1,8 @@
-<package xmlns="http://expath.org/ns/pkg" name="http://www.textgrid.de/sade/default-project" abbrev="sade-textgrid-default-template" version="0.1" spec="1.0">
+<package
+    xmlns="http://expath.org/ns/pkg"
+    name="http://www.textgrid.de/sade/default-project"
+    abbrev="sade-textgrid-default-project"
+    version="0.2"
+    spec="1.0">
     <title>TextGrid default project for SADE </title>
 </package>
